@@ -1,0 +1,211 @@
+/* ============================================================
+   Emerald Browser v0.1 — component styles
+   Sculptural restraint. Cool = confidence = empty space.
+   ============================================================ */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+
+body {
+  margin: 0;
+  font-family: var(--font-ui);
+  color: var(--stone-900);
+  background:
+    radial-gradient(1200px 600px at 85% -10%, rgba(155, 142, 196, 0.10), transparent 60%),
+    radial-gradient(900px 500px at 10% 110%, rgba(74, 124, 89, 0.10), transparent 60%),
+    linear-gradient(160deg, var(--marble-0) 0%, var(--marble-1) 55%, var(--marble-vein) 130%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+/* Subtle marble veining */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.5;
+  background:
+    repeating-linear-gradient(115deg, transparent 0 140px, rgba(217, 212, 198, 0.25) 140px 141px, transparent 141px 300px),
+    repeating-linear-gradient(63deg, transparent 0 220px, rgba(217, 212, 198, 0.18) 220px 221px, transparent 221px 420px);
+}
+
+/* ---------- Persistent menu bar strip (item 7) ---------- */
+.menubar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-2) var(--space-4);
+  background: rgba(29, 27, 23, 0.92);
+  color: var(--marble-0);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-display);
+  font-size: 17px;
+  letter-spacing: 0.02em;
+}
+.brand .gem {
+  width: 22px; height: 22px;
+  background: linear-gradient(135deg, var(--emerald-300), var(--emerald-700));
+  clip-path: polygon(50% 0, 100% 38%, 82% 100%, 18% 100%, 0 38%);
+}
+.menubar .spacer { flex: 1; }
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12.5px;
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
+  background: rgba(250, 249, 246, 0.08);
+  border: 1px solid rgba(250, 249, 246, 0.14);
+  white-space: nowrap;
+}
+.pill .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--emerald-300); }
+.pill.lav .dot { background: var(--lavender); }
+.pill.rose .dot { background: var(--rosemary); }
+.prototype-badge {
+  font-size: 11px;
+  font-family: var(--font-mono);
+  color: var(--stone-200);
+  border: 1px dashed var(--stone-400);
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+}
+
+/* ---------- Views ---------- */
+main { flex: 1; padding: var(--space-5) var(--space-4) 140px; max-width: 1180px; margin: 0 auto; width: 100%; }
+.view-head { margin: var(--space-4) 0 var(--space-5); }
+.view-head h1 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(28px, 4vw, 44px);
+  margin: 0 0 var(--space-1);
+  letter-spacing: -0.01em;
+}
+.view-head p { margin: 0; color: var(--stone-600); font-size: 15px; max-width: 60ch; }
+
+/* ---------- Mission view (items 4 + 9) ---------- */
+.missions { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: var(--space-4); }
+.mission {
+  background: rgba(250, 249, 246, 0.82);
+  border: 1px solid var(--marble-vein);
+  border-radius: var(--radius-l);
+  box-shadow: var(--shadow-1);
+  padding: var(--space-4);
+  backdrop-filter: blur(8px);
+  transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+}
+.mission:hover { transform: translateY(-2px); box-shadow: var(--shadow-2); }
+.mission-top { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: var(--space-3); }
+.mission-top h2 { font-family: var(--font-display); font-size: 20px; font-weight: 500; margin: 0; }
+.mission-meta { font-size: 12px; color: var(--stone-600); font-family: var(--font-mono); }
+.mission ul { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-2); }
+.mission li {
+  display: flex; align-items: center; gap: var(--space-2);
+  font-size: 14px; padding: var(--space-2) var(--space-3);
+  background: var(--marble-0);
+  border: 1px solid var(--marble-vein);
+  border-radius: var(--radius-s);
+}
+.mission li .favicon {
+  width: 16px; height: 16px; border-radius: 4px; flex: none;
+  background: linear-gradient(135deg, var(--lavender-soft), var(--lavender));
+}
+.mission li .tab-title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.mission li .tab-host { margin-left: auto; font-size: 11.5px; color: var(--stone-600); font-family: var(--font-mono); flex: none; }
+.mission .why { margin-top: var(--space-3); font-size: 12.5px; color: var(--rosemary-deep); font-style: italic; }
+
+/* ---------- Launcher (item 7) ---------- */
+.launcher-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: var(--space-4); }
+.app { text-align: center; cursor: pointer; }
+.app .icon {
+  width: 76px; height: 76px; margin: 0 auto var(--space-2);
+  border-radius: 22px;
+  background: linear-gradient(150deg, var(--marble-0), var(--marble-vein));
+  border: 1px solid var(--marble-shadow);
+  box-shadow: var(--shadow-1);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 30px;
+  transition: transform var(--dur) var(--ease);
+}
+.app:hover .icon { transform: scale(1.06); }
+.app.certified .icon { outline: 2px solid var(--emerald-500); outline-offset: 3px; }
+.app .name { font-size: 13px; }
+.app .cert { font-size: 10.5px; color: var(--emerald-700); font-weight: 600; }
+
+/* ---------- Bottom command bar (item 5) ---------- */
+.commandbar-wrap {
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  padding: var(--space-3) var(--space-4) calc(var(--space-3) + env(safe-area-inset-bottom));
+  display: flex; justify-content: center;
+  pointer-events: none;
+  z-index: 60;
+}
+.commandbar {
+  pointer-events: auto;
+  width: min(680px, 100%);
+  display: flex; align-items: center; gap: var(--space-2);
+  background: rgba(29, 27, 23, 0.94);
+  border: 1px solid rgba(250, 249, 246, 0.16);
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-2);
+  padding: 10px 10px 10px 20px;
+  backdrop-filter: blur(16px);
+}
+.commandbar input {
+  flex: 1; border: 0; outline: 0; background: transparent;
+  color: var(--marble-0); font-size: 16px; font-family: var(--font-ui);
+}
+.commandbar input::placeholder { color: var(--stone-400); }
+.cmd-btn {
+  border: 0; cursor: pointer; border-radius: var(--radius-pill);
+  padding: 10px 18px; font-size: 14px; font-weight: 600;
+  background: linear-gradient(135deg, var(--emerald-500), var(--emerald-700));
+  color: #fff;
+}
+.cmd-hint { text-align: center; font-size: 11.5px; color: var(--stone-400); margin-top: 6px; font-family: var(--font-mono); }
+.find-results {
+  width: min(680px, 100%);
+  margin: 0 auto var(--space-2);
+  background: rgba(250, 249, 246, 0.97);
+  border: 1px solid var(--marble-vein);
+  border-radius: var(--radius-m);
+  box-shadow: var(--shadow-2);
+  overflow: hidden;
+  display: none;
+}
+.find-results.open { display: block; }
+.find-results .fr-item {
+  display: flex; gap: var(--space-2); align-items: center;
+  padding: 10px var(--space-3); font-size: 14px; cursor: pointer;
+  border-bottom: 1px solid var(--marble-vein);
+}
+.find-results .fr-item:last-child { border-bottom: 0; }
+.find-results .fr-item:hover { background: var(--lavender-soft); }
+.fr-kind { font-size: 10.5px; font-family: var(--font-mono); color: var(--emerald-700); text-transform: uppercase; letter-spacing: 0.08em; flex: none; width: 74px; }
+
+/* ---------- View toggle ---------- */
+.view-toggle { display: inline-flex; background: var(--marble-1); border: 1px solid var(--marble-vein); border-radius: var(--radius-pill); padding: 4px; gap: 2px; }
+.view-toggle button {
+  border: 0; background: transparent; cursor: pointer;
+  padding: 8px 18px; border-radius: var(--radius-pill);
+  font-size: 13.5px; font-weight: 600; color: var(--stone-600);
+}
+.view-toggle button.active { background: var(--stone-900); color: var(--marble-0); }
+
+.hidden { display: none !important; }
+
+@media (max-width: 640px) {
+  main { padding: var(--space-4) var(--space-3) 150px; }
+  .menubar .pill.hide-s { display: none; }
+}
