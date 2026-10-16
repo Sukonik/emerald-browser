@@ -1,65 +1,47 @@
-/* ============================================================
-   EMERALD design tokens — v0.1
-   Marble materials + herb accents. Safari-classic restraint.
-   ============================================================ */
+/* Emerald Browser · Marble Edition · v2.0.0
+   A design made of carved stone, breathing room, and restrained emerald details.
+   No external fonts, frameworks, icon libraries, or tracking pixels. */
 :root {
-  /* ---- Marble: honed whites, veined grays ---- */
-  --marble-0: #faf9f6;      /* polished white */
-  --marble-1: #f2f0ea;      /* honed */
-  --marble-vein: #e4e0d5;   /* veining */
-  --marble-shadow: #d9d4c6;
-
-  /* ---- Stone: carved architectural grays ---- */
-  --stone-200: #cfc9ba;
-  --stone-400: #a39c8b;
-  --stone-600: #6e675b;
-  --stone-800: #33302a;     /* basalt */
-  --stone-900: #1d1b17;     /* deep basalt */
-
-  /* ---- Emerald: the gemstone ---- */
-  --emerald-300: #6fd3a7;
-  --emerald-500: #149a6c;
-  --emerald-700: #046c4e;
-  --emerald-900: #013f31;
-
-  /* ---- Herbs: accent notes, never theme ---- */
-  --rosemary: #4a7c59;
-  --rosemary-deep: #33573f;
-  --lavender: #9b8ec4;
-  --lavender-soft: #ece8f7;
-
-  /* ---- Type ---- */
-  --font-display: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
-  --font-ui: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Inter, sans-serif;
-  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
-
-  /* ---- Space & shape ---- */
-  --space-1: 4px;
-  --space-2: 8px;
-  --space-3: 16px;
-  --space-4: 24px;
-  --space-5: 32px;
-  --space-6: 48px;
-  --radius-s: 10px;
-  --radius-m: 18px;
-  --radius-l: 28px;
-  --radius-pill: 999px;
-
-  /* ---- Elevation (marble catches soft light) ---- */
-  --shadow-1: 0 1px 2px rgba(29, 27, 23, 0.06), 0 4px 16px rgba(29, 27, 23, 0.06);
-  --shadow-2: 0 2px 6px rgba(29, 27, 23, 0.08), 0 12px 40px rgba(29, 27, 23, 0.12);
-
-  /* ---- Motion: carved, never bouncy ---- */
-  --ease: cubic-bezier(0.32, 0.72, 0, 1);
-  --dur: 220ms;
+  color-scheme: light;
+  --canvas:#f6f4ef;
+  --canvas-deep:#efeee8;
+  --surface:#fbfaf7;
+  --surface-2:#f0efe9;
+  --surface-3:#e6e7df;
+  --ink:#242d2b;
+  --ink-muted:#6c7772;
+  --ink-soft:#909b95;
+  --line:#dedfd7;
+  --line-dark:#c8cec4;
+  --green:#245c4d;
+  --green-2:#366d57;
+  --green-deep:#183c33;
+  --green-soft:#e3ece5;
+  --pearl:#fffdf8;
+  --shadow:0 16px 45px rgba(41,60,50,.07);
+  --shadow-hover:0 20px 46px rgba(41,60,50,.13);
+  --display: "Iowan Old Style","Baskerville","Palatino Linotype",Palatino,Georgia,serif;
+  --ui:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+  --mono: ui-monospace,SFMono-Regular,Consolas,monospace;
+  --ease:cubic-bezier(.2,.65,.25,1);
 }
-
-/* Dark basalt variant (for menu bar / command bar) */
-[data-theme="basalt"] {
-  --marble-0: #232019;
-  --marble-1: #2c2822;
-  --marble-vein: #3a352c;
-  --stone-600: #a39c8b;
-  --stone-800: #ece8f7;
-  --stone-900: #faf9f6;
+:root[data-theme="basalt"] {
+  color-scheme: dark;
+  --canvas:#161e1b;
+  --canvas-deep:#101713;
+  --surface:#23302b;
+  --surface-2:#293832;
+  --surface-3:#35463f;
+  --ink:#f5f3ec;
+  --ink-muted:#bcc9bf;
+  --ink-soft:#97aa9f;
+  --line:#3a4c43;
+  --line-dark:#4b6256;
+  --green:#b3d5bb;
+  --green-2:#acd1b7;
+  --green-deep:#d5e8d8;
+  --green-soft:#314e40;
+  --pearl:#fdfbf6;
+  --shadow:0 16px 45px rgba(0,0,0,.16);
+  --shadow-hover:0 24px 54px rgba(0,0,0,.25);
 }

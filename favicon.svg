@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="t d">
+<title id="t">Emerald pearl</title><desc id="d">An iridescent pearl resting inside an emerald-green carved stone ring.</desc>
+<defs>
+  <linearGradient id="base" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#3b7c63"/><stop offset=".45" stop-color="#1b5543"/><stop offset="1" stop-color="#12392e"/></linearGradient>
+  <radialGradient id="gem" cx=".27" cy=".17" r=".82"><stop stop-color="#fff" /><stop offset=".38" stop-color="#fafaf5"/><stop offset=".72" stop-color="#cfdbd2"/><stop offset="1" stop-color="#91a99d"/></radialGradient>
+</defs>
+<rect width="128" height="128" rx="34" fill="#f0efe9"/>
+<path d="M64 10 111 40v49L64 118 17 89V40Z" fill="url(#base)"/>
+<path d="M64 18 103 43v41L64 109 25 84V43Z" fill="none" stroke="#c7d8cb" stroke-width="2" opacity=".5"/>
+<path d="M25 43 64 18 103 43M17 89l47-24 47 24M64 118V65" stroke="#c1d8c9" opacity=".23" stroke-width="1.5" fill="none"/>
+<circle cx="64" cy="63" r="37" fill="#0d372d" opacity=".4"/>
+<circle cx="64" cy="59" r="36" fill="url(#gem)" stroke="#f7faf4" stroke-width="1.5"/>
+<ellipse cx="51" cy="41" rx="13" ry="7" transform="rotate(-35 51 41)" fill="#fff" opacity=".58"/>
+</svg>

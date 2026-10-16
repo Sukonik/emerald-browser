@@ -1,62 +1,173 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Emerald Browser — v0.1 interface prototype</title>
-<meta name="description" content="Emerald Browser v0.1: the differentiating interface layer — missions, bottom command bar, launcher. Prototype only, no browsing engine yet.">
-<link rel="stylesheet" href="css/tokens.css">
-<link rel="stylesheet" href="css/emerald.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f6f4ef">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="Emerald Browser — Marble Edition v2.0.0. A thoughtfully light browser interface study.">
+  <title>Emerald — Marble Edition · v2.0.0</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/emerald.css">
 </head>
 <body>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <div class="app-shell">
+    <aside class="rail" aria-label="Primary navigation">
+      <a class="rail-brand" href="#home" aria-label="Emerald home">
+        <img src="favicon.svg" width="36" height="36" alt="">
+        <span class="rail-brand-name">emerald<span class="brand-point">.</span></span>
+      </a>
+      <div class="rail-divider"></div>
+      <nav class="rail-nav" aria-label="Views">
+        <button class="nav-item is-current" data-view="home" aria-current="page" title="Home">
+          <span class="nav-icon" aria-hidden="true">⌂</span><span class="nav-label">Home</span>
+        </button>
+        <button class="nav-item" data-view="missions" title="Missions">
+          <span class="nav-icon" aria-hidden="true">▧</span><span class="nav-label">Missions</span>
+        </button>
+        <button class="nav-item" data-view="library" title="Library">
+          <span class="nav-icon" aria-hidden="true">▤</span><span class="nav-label">Library</span>
+        </button>
+        <button class="nav-item" data-view="downloads" title="Downloads">
+          <span class="nav-icon" aria-hidden="true">↓</span><span class="nav-label">Downloads</span>
+        </button>
+      </nav>
+      <div class="rail-bottom">
+        <button class="icon-setting" id="themeButton" type="button" aria-label="Switch to basalt theme" title="Switch theme">◐</button>
+        <div class="rail-index"><span>02</span> / 00</div>
+      </div>
+    </aside>
 
-<header class="menubar">
-  <div class="brand"><span class="gem"></span>Emerald</div>
-  <span class="prototype-badge">v0.1 prototype</span>
-  <div class="spacer"></div>
-  <span class="pill hide-s"><span class="dot"></span>MacBook Pro 2015</span>
-  <span class="pill lav hide-s"><span class="dot"></span>AI · local ready</span>
-  <span class="pill rose"><span class="dot"></span>🛡️ LinkGuard on</span>
-</header>
+    <div class="stage">
+      <header class="topline">
+        <div class="topline-left"><span class="eyebrow">THE MARBLE EDITION</span><span class="divider-dot">✦</span><span class="topline-muted">Independent by design</span></div>
+        <div class="topline-right"><span class="live-dot" aria-hidden="true"></span><span class="prototype-note">INTERFACE PROTOTYPE</span><button class="top-help" id="aboutButton" type="button" title="About this prototype" aria-label="About this prototype">?</button></div>
+      </header>
 
-<main>
-  <div class="view-head">
-    <div class="view-toggle" role="tablist" aria-label="Views">
-      <button class="active" data-view="missions">Missions</button>
-      <button data-view="launcher">Launcher</button>
+      <main id="main" tabindex="-1">
+        <section class="view" id="homeView" data-panel="home" aria-labelledby="homeTitle">
+          <div class="hero">
+            <div class="hero-copy">
+              <div class="overline"><span class="tiny-symbol">✳</span> A BETTER PLACE TO BEGIN</div>
+              <h1 id="homeTitle">The web,<br><em>with room</em><br>to breathe<span class="period">.</span></h1>
+              <p class="hero-description">A quieter window to everything that matters. Thoughtfully organized, comfortably familiar, and made to feel at home on your device.</p>
+              <div class="hero-cta">
+                <button class="solid-button" type="button" data-go="missions">Explore missions <span aria-hidden="true">↗</span></button>
+                <button class="quiet-link" type="button" data-focus-command>Open a page <span aria-hidden="true">→</span></button>
+              </div>
+              <div class="edition-rule"><span>EMERALD / 02</span><span class="thin-line"></span><span>CRAFTED FOR THE EVERYDAY</span></div>
+            </div>
+            <div class="hero-art" aria-label="Abstract sculptural marble artwork representing Emerald's design language" role="img">
+              <div class="art-corner art-corner-top">MATERIAL<br>STUDY 02</div>
+              <svg class="marble-sculpture" viewBox="0 0 520 600" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <defs>
+                  <linearGradient id="stoneFace" x1=".15" x2=".92" y1=".06" y2=".98">
+                    <stop offset="0" stop-color="#fffefb"/><stop offset=".28" stop-color="#dfded7"/><stop offset=".54" stop-color="#fbfaf6"/><stop offset=".78" stop-color="#c9cfc7"/><stop offset="1" stop-color="#f7f7f1"/>
+                  </linearGradient>
+                  <linearGradient id="cutFace" x1="0" x2="1" y1="0" y2="1">
+                    <stop offset="0" stop-color="#d4d7d0"/><stop offset=".65" stop-color="#a1aca5"/><stop offset="1" stop-color="#f0efe9"/>
+                  </linearGradient>
+                  <radialGradient id="pearl" cx=".26" cy=".18" r=".8">
+                    <stop offset="0" stop-color="#fff"/><stop offset=".32" stop-color="#f4f3ee"/><stop offset=".67" stop-color="#c1cac2"/><stop offset="1" stop-color="#85988c"/>
+                  </radialGradient>
+                  <clipPath id="stoneClip"><path d="M260 56C386 56 463 152 463 287c0 131-79 225-203 237C132 536 51 443 51 304 51 166 125 56 260 56Z"/></clipPath>
+                  <filter id="artShade" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="20"/></filter>
+                </defs>
+                <ellipse cx="275" cy="543" rx="157" ry="22" fill="#3c5345" opacity=".19" filter="url(#artShade)"/>
+                <path d="M260 56C386 56 463 152 463 287c0 131-79 225-203 237C132 536 51 443 51 304 51 166 125 56 260 56Z" fill="url(#stoneFace)" stroke="#fdfcf8" stroke-width="6"/>
+                <g clip-path="url(#stoneClip)">
+                  <path d="M28 313c92-72 178-56 266-14 60 28 111 29 216-52v93c-102 74-148 76-220 47C191 346 100 359 28 431Z" fill="#d9ded7" opacity=".65"/>
+                  <path d="M-14 188C89 222 131 147 244 178c67 18 134 85 288 35" fill="none" stroke="#a8b9b0" stroke-width="4" opacity=".43"/>
+                  <path d="M-29 202C84 240 134 165 245 191c69 16 136 89 280 39" fill="none" stroke="#fff" stroke-width="14" opacity=".56"/>
+                  <path d="M-11 400c95-70 182-45 269-7 77 35 139 10 260-82" fill="none" stroke="#9cafa4" stroke-width="3" opacity=".52"/>
+                  <path d="M-18 414c110-63 183-41 277-4 77 30 142 8 262-80" fill="none" stroke="#fff" stroke-width="11" opacity=".64"/>
+                  <path d="M91 57C71 176 97 256 156 305c40 35 67 123 43 258" fill="none" stroke="#c0c7c0" stroke-width="3" opacity=".45"/>
+                  <path d="M332 20c-48 85-63 152-29 222 35 76 37 148-2 319" fill="none" stroke="#fff" stroke-width="7" opacity=".46"/>
+                  <path d="M260 56 463 287 260 524 51 304Z" fill="none" stroke="#fff" stroke-width="2" opacity=".5"/>
+                </g>
+                <path d="M260 56 463 287 260 524" fill="none" stroke="#a4afa7" opacity=".36" stroke-width="3"/>
+                <circle cx="307" cy="263" r="102" fill="url(#pearl)" stroke="#fbfcf7" stroke-width="4"/>
+                <ellipse cx="277" cy="217" rx="41" ry="25" fill="#fff" opacity=".44" transform="rotate(-32 277 217)"/>
+                <path d="M261 381c66 23 124-5 148-53" stroke="#7f9185" opacity=".32" fill="none" stroke-width="2"/>
+              </svg>
+              <div class="art-corner art-corner-bottom">STONE · LIGHT · SPACE<br><span>AN EVERYDAY OBJECT, REIMAGINED</span></div>
+              <div class="art-caption"><span class="caption-dash"></span> Honed, never hurried.</div>
+            </div>
+          </div>
+
+          <div class="section-head section-head-first">
+            <div><div class="overline small">YOUR OWN CORNER OF THE INTERNET</div><h2>Places to return to<span class="period">.</span></h2></div>
+            <button class="section-action" type="button" id="addPlaceButton">+ Add a place</button>
+          </div>
+          <div class="place-grid" id="placeGrid" aria-live="polite"></div>
+
+          <div class="section-head">
+            <div><div class="overline small">A LITTLE MORE ORGANIZED</div><h2>Pick up where you left off<span class="period">.</span></h2></div>
+            <button class="section-action" type="button" data-go="missions">All missions <span aria-hidden="true">↗</span></button>
+          </div>
+          <div class="mission-strip" id="homeMissionGrid"></div>
+
+          <section class="closing-panel">
+            <div class="closing-mark" aria-hidden="true">✳</div>
+            <div><div class="overline small">OUR POINT OF VIEW</div><h3>More of the web.<br><em>Less of the browser.</em></h3></div>
+            <p>Not another dashboard shouting for attention. A well-made space for the things you came to do.</p>
+          </section>
+        </section>
+
+        <section class="view" id="missionsView" data-panel="missions" aria-labelledby="missionsTitle" hidden>
+          <div class="inner-intro"><div class="overline small">ALL THE THREADS, IN ONE PLACE</div><h1 id="missionsTitle">Your missions<span class="period">.</span></h1><p>Give a collection of pages a place to live. Keep what matters close; archive the rest when you're ready.</p><button type="button" class="solid-button" id="newMissionButton">+ New mission <span aria-hidden="true">↗</span></button></div>
+          <div class="subhead-row"><span>ACTIVE COLLECTIONS</span><span id="missionCount"></span></div>
+          <div class="mission-grid" id="missionGrid"></div>
+          <div class="subhead-row archived-heading"><span>ARCHIVED</span></div>
+          <div id="archivedGrid" class="archive-grid"></div>
+        </section>
+
+        <section class="view" id="libraryView" data-panel="library" aria-labelledby="libraryTitle" hidden>
+          <div class="inner-intro"><div class="overline small">THE GOOD STUFF, SAVED</div><h1 id="libraryTitle">Your library<span class="period">.</span></h1><p>Bookmarks without the clutter. Simple, local to this demo, and always within reach.</p><button type="button" class="solid-button" id="newBookmarkButton">+ Save a place <span aria-hidden="true">↗</span></button></div>
+          <div class="subhead-row"><span>YOUR PLACES</span><span id="bookmarkCount"></span></div>
+          <div class="library-list" id="libraryList"></div>
+        </section>
+
+        <section class="view" id="downloadsView" data-panel="downloads" aria-labelledby="downloadsTitle" hidden>
+          <div class="inner-intro"><div class="overline small">EVERYTHING IN ITS PLACE</div><h1 id="downloadsTitle">Downloads<span class="period">.</span></h1><p>A dedicated home for things you keep. Actual download tracking will come with the desktop browser engine.</p></div>
+          <div class="download-empty">
+            <div class="download-ornament" aria-hidden="true">↓</div>
+            <h2>A clean slate.</h2>
+            <p>This is an interface preview. Your browser's real downloads aren't accessible to this GitHub Pages prototype.</p>
+            <button class="quiet-link" type="button" data-go="home">Back to home <span aria-hidden="true">→</span></button>
+          </div>
+        </section>
+
+        <footer class="footer"><span>EMERALD — MARBLE EDITION</span><span>v2.0.0 · UI PROTOTYPE, NOT A WEB BROWSER ENGINE</span><a href="https://github.com/Sukonik/emerald-browser" rel="noopener noreferrer" target="_blank">GITHUB ↗</a></footer>
+      </main>
     </div>
   </div>
 
-  <section id="missionView">
-    <div class="view-head">
-      <h1>Everything is findable.</h1>
-      <p>The browser auto-organizes into missions — you just notice nothing is ever lost.
-         Prototype data below; nothing here browses the web yet.</p>
-    </div>
-    <div class="missions" id="missions"></div>
-  </section>
-
-  <section id="launcherView" class="hidden">
-    <div class="view-head">
-      <h1>Your apps, one tap away.</h1>
-      <p>Any web app installs like a native app. <strong>✓ GoldenSun Certified</strong> means
-         light, private, and tracker-free.</p>
-    </div>
-    <div class="launcher-grid" id="launcherGrid"></div>
-  </section>
-</main>
-
-<div class="commandbar-wrap">
-  <div style="width:min(680px,100%)">
-    <div class="find-results" id="findResults" role="listbox" aria-label="Universal find results"></div>
-    <div class="commandbar">
-      <input id="cmdInput" type="text" placeholder="Type a URL, a command, or ask anything…  (⌘K)" aria-label="Command bar">
-      <button class="cmd-btn" type="button">Go</button>
-    </div>
-    <div class="cmd-hint">URL + command + AI in one bar — prototype only</div>
+  <div class="dock-wrap">
+    <div class="command-results" id="commandResults" role="listbox" aria-label="Search suggestions" hidden></div>
+    <form class="command-dock" id="commandForm" role="search" autocomplete="off">
+      <span class="dock-symbol" aria-hidden="true">✳</span>
+      <label class="sr-only" for="commandInput">Find a place, enter a URL or search the web</label>
+      <input id="commandInput" type="text" placeholder="A place, a thought, a URL…" spellcheck="false" autocapitalize="off" autocomplete="off">
+      <span class="keycap" aria-hidden="true">⌘ K</span>
+      <button class="dock-submit" type="submit" aria-label="Go to URL or search"><span aria-hidden="true">↗</span></button>
+    </form>
+    <div class="dock-note"><span class="dock-pulse"></span> YOUR INTERNET, YOUR PACE <span class="dock-note-separator">·</span> Web addresses open in a new tab</div>
   </div>
-</div>
 
-<script src="js/emerald.js"></script>
+  <dialog id="editDialog" class="edit-dialog" aria-labelledby="dialogTitle">
+    <form id="editForm">
+      <div class="dialog-top"><span class="overline small">MAKE IT YOURS</span><button class="dialog-close" id="dialogClose" type="button" aria-label="Close">×</button></div>
+      <h2 id="dialogTitle">Save a place.</h2>
+      <label for="editName">Name</label><input id="editName" maxlength="80" required placeholder="Something worth remembering">
+      <div id="urlField"><label for="editUrl">Website address</label><input id="editUrl" type="text" placeholder="example.com"></div>
+      <div class="dialog-actions"><button class="solid-button" type="submit">Save <span aria-hidden="true">↗</span></button><button class="quiet-link" type="button" id="dialogCancel">Cancel</button></div>
+    </form>
+  </dialog>
+  <dialog id="aboutDialog" class="edit-dialog" aria-labelledby="aboutTitle"><div class="dialog-top"><span class="overline small">ABOUT THE EDITION</span><button class="dialog-close" id="aboutClose" type="button" aria-label="Close">×</button></div><h2 id="aboutTitle">Made of marble, not glass.</h2><p>Emerald v2.0.0 is an experimental browser interface built with plain HTML, CSS, and JavaScript. The launcher, missions, and bookmarks are interactive demo features saved in your own browser. This is not yet a standalone browser, security layer, or AI assistant.</p><button class="solid-button" type="button" id="aboutDone">Got it <span aria-hidden="true">↗</span></button></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="js/emerald.js"></script>
 </body>
 </html>
