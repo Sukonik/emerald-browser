@@ -1,0 +1,65 @@
+/* ============================================================
+   EMERALD design tokens — v0.1
+   Marble materials + herb accents. Safari-classic restraint.
+   ============================================================ */
+:root {
+  /* ---- Marble: honed whites, veined grays ---- */
+  --marble-0: #faf9f6;      /* polished white */
+  --marble-1: #f2f0ea;      /* honed */
+  --marble-vein: #e4e0d5;   /* veining */
+  --marble-shadow: #d9d4c6;
+
+  /* ---- Stone: carved architectural grays ---- */
+  --stone-200: #cfc9ba;
+  --stone-400: #a39c8b;
+  --stone-600: #6e675b;
+  --stone-800: #33302a;     /* basalt */
+  --stone-900: #1d1b17;     /* deep basalt */
+
+  /* ---- Emerald: the gemstone ---- */
+  --emerald-300: #6fd3a7;
+  --emerald-500: #149a6c;
+  --emerald-700: #046c4e;
+  --emerald-900: #013f31;
+
+  /* ---- Herbs: accent notes, never theme ---- */
+  --rosemary: #4a7c59;
+  --rosemary-deep: #33573f;
+  --lavender: #9b8ec4;
+  --lavender-soft: #ece8f7;
+
+  /* ---- Type ---- */
+  --font-display: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --font-ui: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Inter, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  /* ---- Space & shape ---- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --space-6: 48px;
+  --radius-s: 10px;
+  --radius-m: 18px;
+  --radius-l: 28px;
+  --radius-pill: 999px;
+
+  /* ---- Elevation (marble catches soft light) ---- */
+  --shadow-1: 0 1px 2px rgba(29, 27, 23, 0.06), 0 4px 16px rgba(29, 27, 23, 0.06);
+  --shadow-2: 0 2px 6px rgba(29, 27, 23, 0.08), 0 12px 40px rgba(29, 27, 23, 0.12);
+
+  /* ---- Motion: carved, never bouncy ---- */
+  --ease: cubic-bezier(0.32, 0.72, 0, 1);
+  --dur: 220ms;
+}
+
+/* Dark basalt variant (for menu bar / command bar) */
+[data-theme="basalt"] {
+  --marble-0: #232019;
+  --marble-1: #2c2822;
+  --marble-vein: #3a352c;
+  --stone-600: #a39c8b;
+  --stone-800: #ece8f7;
+  --stone-900: #faf9f6;
+}
