@@ -23,7 +23,12 @@ use universal find across the demo content.
 │   ├── tokens.css        # EMERALD design tokens
 │   └── emerald.css       # component styles
 ├── js/emerald.js         # mission rendering, universal find, launcher
+├── README.md             # this file
 ├── background.md         # vision, naming, design language, plan — start here
+├── notes.md              # highlights of earlier discussions
+├── references.md         # references worth keeping
+├── githubrepos.md        # repos we're watching, and why
+├── browser-cheat-sheet.md # 18 browsers vs. our 10 design points
 ├── .github/workflows/pages.yml
 └── LICENSE               # MPL-2.0
 ```
