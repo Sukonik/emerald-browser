@@ -1,0 +1,12 @@
+{
+  "name": "emerald-browser-interface",
+  "private": true,
+  "version": "2.0.0",
+  "description": "Emerald Browser Marble Edition interface prototype, not a browsing engine",
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "check": "node --check js/emerald.js && node --check js/core.mjs"
+  },
+  "license": "MPL-2.0"
+}
