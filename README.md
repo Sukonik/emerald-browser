@@ -7,6 +7,15 @@ that runs beautifully on old hardware and earns the right to revive the whole de
 > and launcher home screen in lean HTML/CSS/JS. No browsing engine yet — nothing
 > here loads the web. See [`background.md`](background.md) for the story.
 
+## Latest versions
+
+| Version | Date | Notes |
+|---|---|---|
+| [**v0.1.1**](https://github.com/Sukonik/emerald-browser/releases/tag/v0.1.1) | 2026-10-16 | Docs round: cleaned README, background/notes/references, cheat sheet, repo watchlist, issue #1 |
+| [**v0.1.0**](https://github.com/Sukonik/emerald-browser/releases/tag/v0.1.0) | 2026-10-16 | First build: interface prototype (tokens, missions, command bar, launcher) |
+
+*Full history at the bottom of this file.*
+
 ## Try it
 
 Open `index.html`, or the live build once Pages is enabled:
@@ -36,8 +45,14 @@ use universal find across the demo content.
 ## Version builds
 
 Every push to `main` rebuilds via GitHub Actions. Tagged releases are the
-versioned builds — [`v0.1.0`](https://github.com/Sukonik/emerald-browser/releases/tag/v0.1.0)
-is the first.
+versioned builds.
+
+## Version history
+
+| Version | Date | Notes |
+|---|---|---|
+| [**v0.1.0**](https://github.com/Sukonik/emerald-browser/releases/tag/v0.1.0) | 2026-10-16 | First build: EMERALD design tokens, interface prototype (mission view, bottom command bar with universal find, launcher), Pages deploy workflow |
+| [**v0.1.1**](https://github.com/Sukonik/emerald-browser/releases/tag/v0.1.1) | 2026-10-16 | Docs round: cleaned README, `background.md` for future teammates, `notes.md`, `references.md`, `browser-cheat-sheet.md`, `githubrepos.md`, issue #1 (repo watchlist) |
 
 ## License
 
