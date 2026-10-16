@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Emerald Browser — v0.1 interface prototype</title>
+<meta name="description" content="Emerald Browser v0.1: the differentiating interface layer — missions, bottom command bar, launcher. Prototype only, no browsing engine yet.">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/emerald.css">
+</head>
+<body>
+
+<header class="menubar">
+  <div class="brand"><span class="gem"></span>Emerald</div>
+  <span class="prototype-badge">v0.1 prototype</span>
+  <div class="spacer"></div>
+  <span class="pill hide-s"><span class="dot"></span>MacBook Pro 2015</span>
+  <span class="pill lav hide-s"><span class="dot"></span>AI · local ready</span>
+  <span class="pill rose"><span class="dot"></span>🛡️ LinkGuard on</span>
+</header>
+
+<main>
+  <div class="view-head">
+    <div class="view-toggle" role="tablist" aria-label="Views">
+      <button class="active" data-view="missions">Missions</button>
+      <button data-view="launcher">Launcher</button>
+    </div>
+  </div>
+
+  <section id="missionView">
+    <div class="view-head">
+      <h1>Everything is findable.</h1>
+      <p>The browser auto-organizes into missions — you just notice nothing is ever lost.
+         Prototype data below; nothing here browses the web yet.</p>
+    </div>
+    <div class="missions" id="missions"></div>
+  </section>
+
+  <section id="launcherView" class="hidden">
+    <div class="view-head">
+      <h1>Your apps, one tap away.</h1>
+      <p>Any web app installs like a native app. <strong>✓ GoldenSun Certified</strong> means
+         light, private, and tracker-free.</p>
+    </div>
+    <div class="launcher-grid" id="launcherGrid"></div>
+  </section>
+</main>
+
+<div class="commandbar-wrap">
+  <div style="width:min(680px,100%)">
+    <div class="find-results" id="findResults" role="listbox" aria-label="Universal find results"></div>
+    <div class="commandbar">
+      <input id="cmdInput" type="text" placeholder="Type a URL, a command, or ask anything…  (⌘K)" aria-label="Command bar">
+      <button class="cmd-btn" type="button">Go</button>
+    </div>
+    <div class="cmd-hint">URL + command + AI in one bar — prototype only</div>
+  </div>
+</div>
+
+<script src="js/emerald.js"></script>
+</body>
+</html>
